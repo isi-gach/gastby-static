@@ -3,29 +3,39 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "gatsby": "2.16.5",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
-    "react-scripts": "3.2.0"
+    "react-scripts": "3.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start:gatsby": "gatsby develop",
+    "prebuild": "rm -rf public web/public && cp -r scripts-public public",
+    "build": "PUBLIC_URL=/public react-scripts build",
+    "postbuild": "mv build web/public && serve",
+    "prebuild:gatsby": "rm -rf public web/public",
+    "build:gatsby": "PUBLIC_URL=/public gatsby build --prefix-paths",
+    "postbuild:gatsby": "mv public web && serve",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "babel-eslint": "10.0.1",
+    "babel-loader": "8.0.5",
+    "eslint": "5.16.0",
+    "gatsby-plugin-sharp": "^2.2.32",
+    "gatsby-transformer-sharp": "^2.3.0",
+    "serve": "^11.2.0",
+    "webpack": "4.29.6",
+    "webpack-dev-server": "3.2.1"
+  },
+  "browserslist": [
+    ">0.25%",
+    "not dead"
+  ]
 }
