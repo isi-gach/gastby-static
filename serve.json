@@ -1,5 +1,4 @@
 {
   "public": "web",
-  "cleanUrls": false,
-  "rewrites": [{ "source": "/demo/index.html", "destination": "/public/index.html" }]
+  "cleanUrls": false
 }

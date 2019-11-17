@@ -1,7 +1,3 @@
-`npm install && npm run build:gatsby`
+`npm install && npm run build`
 
-Open [http://localhost:5000/demo/index.html](http://localhost:5000/demo/index.html)
-
-`npm run build`
-
-Open [http://localhost:5000/demo/index.html](http://localhost:5000/demo/index.html)
+Open [http://localhost:5000/public/index.html](http://localhost:5000/public/index.html)
