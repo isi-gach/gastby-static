@@ -10,9 +10,9 @@
   },
   "scripts": {
     "start": "gatsby develop",
-    "prebuild": "rm -rf public web/public",
+    "prebuild": "rm -rf public",
     "build": "cross-env PUBLIC_URL=/public gatsby build --prefix-paths",
-    "postbuild": "mv public web && serve"
+    "postbuild": "serve"
   },
   "devDependencies": {
     "cross-env": "^6.0.3",
