@@ -3,16 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@wardpeet/gatsby-plugin-static-site": "^0.1.3",
+    "@wardpeet/gatsby-plugin-static-site": "^0.2.0",
     "gatsby": "^2.17.15",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
   },
   "scripts": {
     "start": "gatsby develop",
-    "prebuild": "rm -rf public",
+    "prebuild": "rm -rf public web/public",
     "build": "cross-env PUBLIC_URL=/public gatsby build --prefix-paths",
-    "postbuild": "serve"
+    "postbuild": "mv public web && serve"
   },
   "devDependencies": {
     "cross-env": "^6.0.3",
